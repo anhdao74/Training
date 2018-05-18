@@ -1,0 +1,31 @@
+{# src/DAO/PlatformBundle/Resources/views/Advert/edit.html.twig #}
+
+{% extends "DAOPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier une annonce - {{ parent() }}
+{% endblock %}
+
+{% block daoplatform_body %}
+
+  <h2>Modifier une annonce</h2>
+
+  {{ include("DAOPlatformBundle:Advert:form.html.twig") }}
+
+  {% if advert.image is not null %}
+  <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
+  {% endif %}
+
+  <p>
+    Vous éditez une annonce déjà existante, merci de ne pas changer
+    l'esprit général de l'annonce déjà publiée.
+  </p>
+
+  <p>
+    <a href="{{ path('dao_platform_view', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'annonce
+    </a>
+  </p>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+# app/config/routing.yml
+
+dao_platform:
+    resource: "@DAOPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform 

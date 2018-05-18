@@ -1,0 +1,33 @@
+dao_platform_home:
+    path:     /{page}
+    defaults:  
+        _controller: DAOPlatformBundle:Advert:index 
+        page:    1
+    requirements:
+        page: \d*
+
+dao_platform_view:
+    path:    /advert/{id}
+    defaults: 
+        _controller: DAOPlatformBundle:Advert:view
+    requirements: 
+        id: \d+
+
+dao_platform_add:
+    path:    /add 
+    defaults: 
+        _controller: DAOPlatformBundle:Advert:add
+
+dao_platform_edit:
+    path:    /edit/{id}
+    defaults:
+        _controller: DAOPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+dao_platform_delete:
+    path:    /delete/{id}
+    defaults:
+        _controller: DAOPlatformBundle:Advert:delete
+    requirements:
+        id: \d+

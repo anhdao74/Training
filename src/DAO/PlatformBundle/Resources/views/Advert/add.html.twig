@@ -1,0 +1,16 @@
+{# src/DAO/PlatformBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends "DAOPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block daoplatform_body %}
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("DAOPlatformBundle:Advert:form.html.twig") }}
+
+
+{% endblock %}
